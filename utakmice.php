@@ -63,8 +63,8 @@ if(isset($_GET['delete_id']))
                 <td><?php echo $row[4]; ?></td>
                 <td><?php echo $row[5]; ?></td>
                 <td><?php echo $row[6]; ?></td>
-                <td><a href="javascript:edit_id('<?php echo $row[1]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
-                <td><a href="javascript:delete_id('<?php echo $row[1]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
+                <td><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
+                <td><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
             </tr> <?php } ?>
             <tr>
                 <th colspan="8"><a href="index.php">Povratak na glavnu stranicu</a></th>
