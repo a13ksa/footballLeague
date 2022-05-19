@@ -12,10 +12,11 @@ if(isset($_POST['btn-update'])) {
     $grad = $_POST['grad'];
     $drzava = $_POST['drzava'];
     $godinaOsnivanja = $_POST['godinaOsnivanja'];
+    $koef = $_POST['koef'];
     // variables for input data
 
     // sql query for update data into database
-    $sql_query = "UPDATE klubovi SET naziv='$naziv',grad='$grad',drzava='$drzava',godinaOsnivanja='$godinaOsnivanja' WHERE idKluba=".$_GET['edit_id'];
+    $sql_query = "UPDATE klubovi SET naziv='$naziv',grad='$grad',drzava='$drzava',godinaOsnivanja='$godinaOsnivanja',koef='$koef' WHERE idKluba=".$_GET['edit_id'];
     // sql query for update data into database
  
     // sql query execution function
@@ -46,17 +47,18 @@ if(isset($_POST['btn-update'])) {
         <form method="post">
         <table align="center">
         <tr >
-            <th align="center" colspan="5"><p>Promenite podatke</p></th>
+            <th align="center" colspan="6"><p>Promenite podatke</p></th>
         </tr>
         <tr>
             <td><input type="text" name="naziv" placeholder="Naziv" value="<?php echo $fetched_row['naziv']; ?>" required /></td>
             <td><input type="text" name="grad" placeholder="Grad" value="<?php echo $fetched_row['grad']; ?>" required /></td>
             <td><input type="text" name="drzava" placeholder="Drzava" value="<?php echo $fetched_row['drzava']; ?>" required /></td>
             <td><input type="number" name="godinaOsnivanja" placeholder="Godina osnivanja" value="<?php echo $fetched_row['godinaOsnivanja']; ?>" required /></td>
+            <td><input type="number" name="koef" placeholder="koef" value="<?php echo $fetched_row['koef']; ?>" required /></td>
             <th><button type="submit" name="btn-update"><strong>PROMENI</strong></button></th>
         </tr>
         <tr>
-            <th align="center" colspan="5"><a href="klubovi.php">Povratak na glavnu stranicu</a></th>
+            <th align="center" colspan="6"><a href="klubovi.php">Povratak na glavnu stranicu</a></th>
         </tr>
         </table>
         </form>

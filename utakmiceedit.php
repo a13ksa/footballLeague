@@ -16,11 +16,12 @@ if(isset($_POST['btn-update'])) {
     $goloviDomaci = $_POST['goloviDomaci'];
     $goloviGosti = $_POST['goloviGosti'];
     $idSudije = $_POST['idSudije'];
+    $sezona = $_POST['sezona'];
     // variables for input data
 
     // sql query for update data into database
     $sql_query = "UPDATE utakmice 
-                  SET vreme='$vreme',idTima1='$idTima1',idTima2='$idTima2',goloviDomaci='$goloviDomaci',goloviGosti='$goloviGosti',idSudije='$idSudije' 
+                  SET vreme='$vreme',idTima1='$idTima1',idTima2='$idTima2',goloviDomaci='$goloviDomaci',goloviGosti='$goloviGosti',idSudije='$idSudije',sezona='$sezona' 
                   WHERE idUtakmice=".$_GET['edit_id'];
     // sql query for update data into database
  
@@ -52,7 +53,7 @@ if(isset($_POST['btn-update'])) {
         <form method="post">
         <table align="center">
         <tr >
-            <th align="center" colspan="8"><p>Promenite podatke</p></th>
+            <th align="center" colspan="9"><p>Promenite podatke</p></th>
         </tr>
         <tr>
             <td><input type="datetime" name="vreme" placeholder="vreme" value="<?php echo $fetched_row['vreme']; ?>" required /></td>
@@ -62,10 +63,11 @@ if(isset($_POST['btn-update'])) {
             <td><input type="number" name="goloviGosti" placeholder="goloviGosti" value="<?php echo $fetched_row['goloviGosti']; ?>" required /></td>
             <td><input type="number" name="goloviGosti" placeholder="goloviGosti" value="<?php echo $fetched_row['goloviGosti']; ?>" required /></td>
             <td><input type="number" name="idSudije" placeholder="idSudije" value="<?php echo $fetched_row['idSudije']; ?>" required /></td>
+            <td><input type="number" name="sezona" placeholder="sezona" value="<?php echo $fetched_row['sezona']; ?>" required /></td>
             <th><button type="submit" name="btn-update"><strong>PROMENI</strong></button></th>
         </tr>
         <tr>
-            <th align="center" colspan="8"><a href="utakmice.php">Povratak na glavnu stranicu</a></th>
+            <th align="center" colspan="9"><a href="utakmice.php">Povratak na glavnu stranicu</a></th>
         </tr>
         </table>
         </form>
