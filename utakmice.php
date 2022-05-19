@@ -39,19 +39,20 @@ if(isset($_GET['delete_id']))
         <div id="content">
             <table align="center">
             <tr>
-                <th colspan="8"><a href="utakmiceadd.php">Dodaj podatak</a></th>
+                <th colspan="9"><a href="utakmiceadd.php">Dodaj podatak</a></th>
             </tr>
             <tr>
                 <th>Vreme</th>
                 <th>Domacin</th>
-                <th>Golovi domaci</th>
-                <th>Golovi gosti</th>
+                <th><div class="shortRow"></div></th>
+                <th><div class="shortRow"></div></th>
                 <th>Gost</th>
                 <th>id Sudije</th>
+                <th>Sezona</th>
                 <th colspan="2">Operacija</th>
             </tr>
             <?php
-            $sql_query="SELECT idUtakmice, vreme, k1.naziv, goloviDomaci, goloviGosti, k2.naziv, idSudije
+            $sql_query="SELECT idUtakmice, vreme, k1.naziv, goloviDomaci, goloviGosti, k2.naziv, idSudije, sezona
                         FROM `utakmice` LEFT JOIN klubovi k1 ON idTima1 = k1.idKluba
                                         LEFT JOIN klubovi k2 ON idTima2 = k2.idKluba";
             $result_set=mysqli_query($con,$sql_query);
@@ -59,15 +60,16 @@ if(isset($_GET['delete_id']))
             <tr>
                 <td><?php echo $row[1]; ?></td>
                 <td><?php echo $row[2]; ?></td>
-                <td><?php echo $row[3]; ?></td>
-                <td><?php echo $row[4]; ?></td>
+                <td><div class="shortRow"><?php echo $row[3]; ?></div></td>
+                <td><div class="shortRow"><?php echo $row[4]; ?></div></td>
                 <td><?php echo $row[5]; ?></td>
                 <td><?php echo $row[6]; ?></td>
+                <td><?php echo $row[7]; ?></td>
                 <td><a href="javascript:edit_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
                 <td><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
             </tr> <?php } ?>
             <tr>
-                <th colspan="8"><a href="index.php">Povratak na glavnu stranicu</a></th>
+                <th colspan="9"><a href="index.php">Povratak na glavnu stranicu</a></th>
             </tr>
             </table>
         </div>

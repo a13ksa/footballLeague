@@ -9,9 +9,10 @@ if(isset($_POST['btn-save'])) {
     $goloviDomaci = $_POST['goloviDomaci'];
     $goloviGosti = $_POST['goloviGosti'];
     $idSudije = $_POST['idSudije'];
+    $sezona = $_POST['sezona'];
 
     // sql query for inserting data into database
-    $sql_query = "INSERT INTO utakmice(vreme,idTima1,idTima2,goloviDomaci, goloviGosti,idSudije) VALUES('$vreme','$idTima1','$idTima2','$goloviDomaci','$goloviGosti','$idSudije')";
+    $sql_query = "INSERT INTO utakmice(vreme,idTima1,idTima2,goloviDomaci,goloviGosti,idSudije,sezona) VALUES('$vreme','$idTima1','$idTima2','$goloviDomaci','$goloviGosti','$idSudije','$sezona')";
 
     //izvrsavanje upita
     if(mysqli_query($con,$sql_query)) { ?>
@@ -40,7 +41,7 @@ if(isset($_POST['btn-save'])) {
             <form method="post">
             <table align="center">
             <tr >
-                <th align="center" colspan="7"><p>Unesite podatke</p></th>
+                <th align="center" colspan="8"><p>Unesite podatke</p></th>
             </tr>
             <tr>
                 <td><input type="datetime" name="vreme" placeholder="vreme" required /></td>
@@ -49,10 +50,11 @@ if(isset($_POST['btn-save'])) {
                 <td><input type="number" name="goloviDomaci" placeholder="goloviDomaci" required /></td>
                 <td><input type="number" name="goloviGosti" placeholder="goloviGosti" required /></td>
                 <td><input type="number" name="idSudije" placeholder="idSudije" required /></td>
+                <td><input type="number" name="sezona" placeholder="sezona" required /></td>
                 <th><button type="submit" name="btn-save"><strong>Sacuvaj</strong></button></th>
             </tr>
             <tr >
-                <th align="center" colspan="7"><a href="utakmice.php">Povratak na glavnu stranicu</a></th>
+                <th align="center" colspan="8"><a href="utakmice.php">Povratak na glavnu stranicu</a></th>
             </tr>
             </table>
             </form>

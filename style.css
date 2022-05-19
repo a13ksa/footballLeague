@@ -101,3 +101,14 @@ td input{
  text-align:center;
  margin-bottom: 25px;
 }
+#queries{
+  display: flex;
+  flex-direction: column;
+}
+#queries a{
+  width: fit-content;
+}
+.shortRow{
+  width: 30px;
+  margin: auto;
+}
