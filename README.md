@@ -2,7 +2,7 @@
 This project is for my graduation work! ;)
 
 ### Home Page
-Home Page is based like this so you can access to every information or function in just one or two click.
+Home Page is based like this so you can access to every information or function in just one or two click. 
 ![](picHomepage.PNG)
 
 ### Tables
