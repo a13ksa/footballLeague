@@ -2,7 +2,7 @@
 This project is for my graduation work! ;)
 
 ### ER Diagram
-Relationships in database.
+Relationships in database. <br />
 ![](bazaFudbal.png)
 
 ### Home Page
