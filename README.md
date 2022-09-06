@@ -1,6 +1,10 @@
 # footballLeague
 This project is for my graduation work! ;)
 
+### ER Diagram
+Relationships in database.
+![](bazaFudbal.png)
+
 ### Home Page
 Home Page is based like this so you can access to every information or function in just one or two click. 
 ![](picHomepage.PNG)
