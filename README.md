@@ -1,5 +1,5 @@
 # footballLeague
-This project is for my graduation work! ;)
+This project is for my Term Paper! ;)
 
 ### ER Diagram
 Relationships in database. <br />
